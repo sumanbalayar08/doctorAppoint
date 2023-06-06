@@ -1,11 +1,24 @@
 import React from "react";
-import {Input, Form} from 'antd';
+import {Input, Form,message} from 'antd';
+
 import {Link} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const Login=()=>{
 
-const onFinishHandler=(values)=>{
-console.log(values);
+  const navigate=useNavigate();
+
+
+const onFinishHandler=async(values)=>{
+const res=await axios.post('http://localhost:4000/api/login',values);
+if(res.data.success){
+  message.success("Login Successfully");
+  navigate('/');
+}else{
+  message.error(res.data.message);
+}
 }
 
     return(
