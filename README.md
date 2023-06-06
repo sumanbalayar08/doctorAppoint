@@ -3,13 +3,13 @@
 The Doctor Appointment System is a web application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). It allows patients to schedule appointments with doctors easily and efficiently. This README file provides an overview of the project, installation instructions, and other relevant information.
 
 ### Table of Contents
-Features
-Prerequisites
-Installation
-Usage
-Technologies Used
-Contributing
-License
+- Features
+- Prerequisites
+- Installation
+- Usage
+- Technologies Used
+- Contributing
+- License
 
 ### Features
 Patients can create an account and log in.
