@@ -14,7 +14,8 @@ const Login=()=>{
 const onFinishHandler=async(values)=>{
 const res=await axios.post('http://localhost:4000/api/login',values);
 if(res.data.success){
-  message.success("Login Successfully");
+  message.success(res.data.message);
+  localStorage.setItem("token",res.data.token);
   navigate('/');
 }else{
   message.error(res.data.message);
