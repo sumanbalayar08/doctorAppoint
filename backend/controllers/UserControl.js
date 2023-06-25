@@ -53,4 +53,25 @@ const RegisterController = async (req, res) => {
     });
   }
 };
-module.exports = { loginController, RegisterController };
+
+const authController = async (req, res) => {
+  try {
+    const user = await UserModel.findOne({ _id: req.body.userId });
+    if (!user) {
+      res.status(200).send({ message: "User not found", success: false });
+    } else {
+      res.status(200).send({
+        success: true,
+        data: {
+          name: user.name,
+          email: user.email,
+        },
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(400).send({ message: "Auth Failed", success: false });
+  }
+};
+
+module.exports = { loginController, RegisterController, authController };
