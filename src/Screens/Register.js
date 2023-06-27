@@ -6,10 +6,15 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { showloading, hideloading } from "../redux/features/alertSlice";
+import { useEffect } from "react";
+
+
 
 const Register = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+ 
 
   const onFinishHandler = async (values) => {
     try {

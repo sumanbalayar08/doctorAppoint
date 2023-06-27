@@ -3,20 +3,27 @@ import "./App.css";
 import Login from "./Screens/Login";
 import Register from "./Screens/Register";
 import Home from "./Screens/Home";
-import { UseSelector, useSelector } from "react-redux";
+import {useSelector } from "react-redux";
 import Spinner from "./Components/Spinner";
+import PrivateRoutes from "./Components/PrivateRoutes";
+import PublicRoutes from "./Components/PublicRoutes";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
+
   return (
     <BrowserRouter>
       {loading ? (
-        <Spinner/>
+        <Spinner />
       ) : (
         <Routes>
+          <Route element={<PrivateRoutes/>}>
           <Route path="/" element={<Home />} />
+          </Route>
+          <Route element={<PublicRoutes/>}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          </Route>
         </Routes>
       )}
     </BrowserRouter>
