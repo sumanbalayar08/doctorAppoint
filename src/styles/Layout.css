@@ -1,0 +1,45 @@
+.main {
+    padding: 10px;
+    height: 100vh;
+    display: flex
+}
+
+.sidebar {
+    min-height: 100%;
+    border-radius: 5px;
+    background-color: brown;
+    width: 300px;
+    margin-right: 20px;
+    box-shadow: 0 0 2px gray;
+    color:white
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.layout {
+    display: flex;
+}
+
+.header {
+    height: 10vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    width:100%
+}
+
+.body {
+    height: 80vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    width: 100%;
+}
+
+.logo h6{
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0px;
+    text-align: center;
+}
