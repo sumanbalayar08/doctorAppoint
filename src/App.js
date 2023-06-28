@@ -7,6 +7,7 @@ import {useSelector } from "react-redux";
 import Spinner from "./Components/Spinner";
 import PrivateRoutes from "./Components/PrivateRoutes";
 import PublicRoutes from "./Components/PublicRoutes";
+import { Layout } from "antd";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -17,9 +18,8 @@ function App() {
         <Spinner />
       ) : (
         <Routes>
-          <Route element={<PrivateRoutes/>}>
+          
           <Route path="/" element={<Home />} />
-          </Route>
           <Route element={<PublicRoutes/>}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

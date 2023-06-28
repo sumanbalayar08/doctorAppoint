@@ -8,7 +8,7 @@
     min-height: 100%;
     border-radius: 5px;
     background-color: brown;
-    width: 300px;
+    width: 400px;
     margin-right: 20px;
     box-shadow: 0 0 2px gray;
     color:white
@@ -42,4 +42,31 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px 0px;
     text-align: center;
+}
+
+.menu{
+margin-top: 50px;
+}
+
+.menu-item{
+    padding-top: 30px;
+}
+
+.menu-item a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2rem;
+}
+.menu-item i{
+    padding: 5px 15px;
+    font-size: 2rem;
+}
+.selected{
+    background-color: white;
+    padding: 10px;
+}
+
+.selected a, .selected i{
+    background-color: white;
+    color:brown
 }

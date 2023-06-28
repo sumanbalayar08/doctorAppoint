@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/Layout.css";
 import SidebarData from "../Data/SidebarData";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const Layout = ({children}) => {
+
+const location=useLocation();
+
   return (
     <div className="main">
       <div className="layout">
@@ -14,11 +17,12 @@ const Layout = ({children}) => {
           <hr/>
           <div className="menu">
             {SidebarData.map((item)=>{
+              const isActive=location.pathname===item.path;
                 return(
                     <>
-                    <div className="menu-item">
+                    <div className={`menu-item ${isActive && 'selected'} `}>
                         <i class={item.icon}></i>
-
+                        <Link to={item.path}>{item.name}</Link>
                     </div>
                     </>
                 )
