@@ -5,7 +5,6 @@ const AuthMiddle = async (req, res, next) => {
   const token = req.headers["authorization"].split(" ")[1]; 
   jwt.verify(token, process.env.JWT_SECRET, (err, decode) => {
     if (err) {
-        console.warn('hello')
       return res.status(200).send({ message: "Authorization Failed", success: false });
     } else {
       req.body.userId = decode.id;
