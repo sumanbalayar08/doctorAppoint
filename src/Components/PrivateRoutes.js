@@ -1,7 +1,6 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { Outlet,Navigate } from 'react-router-dom';
-import Login from '../Screens/Login';
-import Register from '../Screens/Register';
+
 
 const PrivateRoutes=()=>{
     const auth=localStorage.getItem("token");

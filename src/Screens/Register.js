@@ -27,7 +27,7 @@ const Register = () => {
       dispatch(hideloading());
       if (res.data.success) {
         message.success("Register Successfully!");
-        localStorage.setItem("token", res.data.token);
+        //localStorage.setItem("token", res.data.token);
         navigate("/login");
       } else {
         message.error(res.data.message);

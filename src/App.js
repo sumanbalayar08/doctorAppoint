@@ -18,10 +18,11 @@ function App() {
         <Spinner />
       ) : (
         <Routes>
-          
+          <Route element={<PrivateRoutes/>}>
           <Route path="/" element={<Home />} />
+          </Route>
           <Route element={<PublicRoutes/>}>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register />} />
           </Route>
         </Routes>
