@@ -8,7 +8,7 @@
     min-height: 100%;
     border-radius: 5px;
     background-color: brown;
-    width: 400px;
+    width: 300px;
     margin-right: 20px;
     box-shadow: 0 0 2px gray;
     color:white
@@ -21,6 +21,7 @@
 
 .layout {
     display: flex;
+    width: 100%;
 }
 
 .header {
@@ -59,7 +60,7 @@ margin-top: 50px;
 }
 .menu-item i{
     padding: 5px 15px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .selected{
     background-color: white;
@@ -69,4 +70,27 @@ margin-top: 50px;
 .selected a, .selected i{
     background-color: white;
     color:brown
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 15px;
+    height: 50px;
+}
+
+.header-content i{
+    margin-right: 20px;
+    font-size: 1.4rem;
+
+}
+
+.header-content a{
+    text-decoration: none;
+    color:black;
+    margin:0 10px ;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-style: bold;    
 }

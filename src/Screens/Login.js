@@ -25,8 +25,7 @@ const Login = () => {
         message.error(res.data.message);
       }
     } catch (err) {
-            dispatch(hideloading());
-
+      dispatch(hideloading());
       console.warn(err);
     }
   };
